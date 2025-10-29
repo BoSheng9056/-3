@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>統計圖表</title>
+</head>
+<body>
+
+  <h2 style="font-size:45px; text-align:center;">統計圖表</h2>
+
+  <canvas id="myChart" width="600" height="400"></canvas>
+	<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'bar', // 圖表類型：bar, line, pie, etc.
+    data: {
+      labels: ['男性', '女性','','男性', '女性','','男性', '女性'],
+      datasets: [{
+        label: '人數比%',
+        data: [88.5, 11.5,,88.1,11.9,,82.7,17.3],
+        backgroundColor: 'rgba(75, 192, 192, 0.6)'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: '韓國、日本、美國有玩Nikke的男女比'
+        }
+      }
+    }
+  });
+</script>
+
+
+
+
+</body>
+</html>
