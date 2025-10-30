@@ -1,31 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>其他人的網站連結</title>
   <style>
-	th, td {
-  	 border: 1px solid black;
- 	 border-radius: 10px;
-	}
-	th, td {
-  	 background-color: #FBD7C9;  
-	}
-  </style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
 
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #FF6F61;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 20px;
+      text-align: center;
+    }
+
+    td {
+      background-color: #FBD7C9;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    td:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    a:hover {
+      color: #FF6F61;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #FF6F61;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <h2 style="font-size:45px; text-align:center;">其他人的網站連結</h2>
+  <h2>其他人的網站連結</h2>
 
-  <table style="width:100%">
-  <tr>
-    <th><a href="https://yuan973-max.github.io/-/">yuan973</a></th>
-    <th><a href="https://kaorufl.github.io/my-first-website/">kaorufl</a></th> 
-    <th><a href="https://a6706976-5455.github.io/the-internet-homework/">阿諺</a></th>
-  </tr>    
-  
-  <p style="text-align: center"><a href="index.html">回主頁</a><p>
+  <table>
+    <tr>
+      <td><a href="https://yuan973-max.github.io/-/">yuan973</a></td>
+      <td><a href="https://kaorufl.github.io/my-first-website/">kaorufl</a></td>
+      <td><a href="https://a6706976-5455.github.io/the-internet-homework/">阿諺</a></td>
+    </tr>
+  </table>
+
+  <div class="back-link">
+    <a href="index.html">回主頁</a>
+  </div>
 
 </body>
 </html>
-

@@ -1,41 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>統計圖表</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>統計圖表</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #FF6F61;
+      margin-bottom: 10px;
+    }
+
+    p.description {
+      text-align: center;
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .chart-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #FF6F61;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <h2 style="font-size:45px; text-align:center;">統計圖表</h2>
+  <h2>統計圖表</h2>
+  <p class="description">以下圖表呈現韓國、日本、美國玩家的性別比例。</p>
 
-  <canvas id="myChart" width="600" height="400"></canvas>
-	<script>
-  const ctx = document.getElementById('myChart').getContext('2d');
-  const myChart = new Chart(ctx, {
-    type: 'bar', // 圖表類型：bar, line, pie, etc.
-    data: {
-      labels: ['男性', '女性','','男性', '女性','','男性', '女性'],
-      datasets: [{
-        label: '性別比例%',
-        data: [88.5, 11.5,,88.1,11.9,,82.7,17.3],
-        backgroundColor: 'rgba(75, 12, 192, 0.6)'
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        title: {
-          display: true,
-          text: '韓國、日本、美國有玩Nikke的男女比'
+  <div class="chart-container">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <div class="back-link">
+    <a href="index.html">回主頁</a>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['男性', '女性', '', '男性', '女性', '', '男性', '女性'],
+        datasets: [{
+          label: '性別比例%',
+          data: [88.5, 11.5, , 88.1, 11.9, , 82.7, 17.3],
+          backgroundColor: 'rgba(75, 12, 192, 0.6)'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: '韓國、日本、美國有玩Nikke的男女比'
+          }
         }
       }
-    }
-  });
-</script>
-
-<p style="text-align: center"><a href="index.html">回主頁</a><p>
-
+    });
+  </script>
 
 </body>
 </html>
